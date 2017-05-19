@@ -247,6 +247,138 @@ namespace WiiTUIO.Properties
             }
         }
 
+        private double _pointer_limit_top = 0.5;
+        public double pointer_limit_top
+        {
+            get { return _pointer_limit_top; }
+            set
+            {
+                _pointer_limit_top = value;
+                OnPropertyChanged("pointer_limit_top");
+            }
+        }
+
+        private double _pointer_limit_bottom = 0.5;
+        public double pointer_limit_bottom
+        {
+            get { return _pointer_limit_bottom; }
+            set
+            {
+                _pointer_limit_bottom = value;
+                OnPropertyChanged("pointer_limit_bottom");
+            }
+        }
+
+        private double _pointer_limit_left = 0.5;
+        public double pointer_limit_left
+        {
+            get { return _pointer_limit_left; }
+            set
+            {
+                _pointer_limit_left = value;
+                OnPropertyChanged("pointer_limit_left");
+            }
+        }
+
+        private double _pointer_limit_right = 0.5;
+        public double pointer_limit_right
+        {
+            get { return _pointer_limit_right; }
+            set
+            {
+                _pointer_limit_right = value;
+                OnPropertyChanged("pointer_limit_right");
+            }
+        }
+
+        private double _stickl_limit_top = 0.5;
+        public double stickl_limit_top
+        {
+            get { return _stickl_limit_top; }
+            set
+            {
+                _stickl_limit_top = value;
+                OnPropertyChanged("stickl_limit_top");
+            }
+        }
+
+        private double _stickl_limit_bottom = 0.5;
+        public double stickl_limit_bottom
+        {
+            get { return _stickl_limit_bottom; }
+            set
+            {
+                _stickl_limit_bottom = value;
+                OnPropertyChanged("stickl_limit_bottom");
+            }
+        }
+
+        private double _stickl_limit_left = 0.5;
+        public double stickl_limit_left
+        {
+            get { return _stickl_limit_left; }
+            set
+            {
+                _stickl_limit_left = value;
+                OnPropertyChanged("stickl_limit_left");
+            }
+        }
+
+        private double _stickl_limit_right = 0.5;
+        public double stickl_limit_right
+        {
+            get { return _stickl_limit_right; }
+            set
+            {
+                _stickl_limit_right = value;
+                OnPropertyChanged("stickl_limit_right");
+            }
+        }
+
+        private double _stickr_limit_top = 0.5;
+        public double stickr_limit_top
+        {
+            get { return _stickr_limit_top; }
+            set
+            {
+                _stickr_limit_top = value;
+                OnPropertyChanged("stickr_limit_top");
+            }
+        }
+
+        private double _stickr_limit_bottom = 0.5;
+        public double stickr_limit_bottom
+        {
+            get { return _stickr_limit_bottom; }
+            set
+            {
+                _stickr_limit_bottom = value;
+                OnPropertyChanged("stickr_limit_bottom");
+            }
+        }
+
+        private double _stickr_limit_left = 0.5;
+        public double stickr_limit_left
+        {
+            get { return _stickr_limit_left; }
+            set
+            {
+                _stickr_limit_left = value;
+                OnPropertyChanged("stickr_limit_left");
+            }
+        }
+
+        private double _stickr_limit_right = 0.5;
+        public double stickr_limit_right
+        {
+            get { return _stickr_limit_right; }
+            set
+            {
+                _stickr_limit_right = value;
+                OnPropertyChanged("stickr_limit_right");
+            }
+        }
+
         private double _pointer_cursorSize = 0.03;
         public double pointer_cursorSize
         {
