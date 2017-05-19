@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using WiiTUIO.Provider;
+using WiiTUIO.Properties;
+using System.IO;
 
 namespace WiiTUIO.Output.Handlers.Xinput
 {
@@ -21,6 +23,9 @@ namespace WiiTUIO.Output.Handlers.Xinput
         private long id;
 
         public Action<Byte, Byte> OnRumble { get; set; }
+
+        private StringBuilder sb = new StringBuilder("");
+        //private int count = 0;
 
         public XinputHandler(long id)
         {
@@ -258,10 +263,14 @@ namespace WiiTUIO.Output.Handlers.Xinput
                         case "360.stickl":
                             report.StickLX = smoothedX;
                             report.StickLY = smoothedY;
+                            report.StickRX = (smoothedPos.X - Settings.Default.stickl_limit_left) / (Settings.Default.stickl_limit_right - Settings.Default.stickl_limit_left);
+                            report.StickRY = 1 - (smoothedPos.Y - Settings.Default.stickl_limit_top) / (Settings.Default.stickl_limit_bottom - Settings.Default.stickl_limit_top);
                             break;
                         case "360.stickr":
-                            report.StickRX = smoothedX;
-                            report.StickRY = smoothedY;
+                            //report.StickRX = smoothedX;
+                            //report.StickRY = smoothedY;
+                            report.StickRX = (smoothedPos.X - Settings.Default.stickr_limit_left) / (Settings.Default.stickr_limit_right - Settings.Default.stickr_limit_left);
+                            report.StickRY = 1 - (smoothedPos.Y - Settings.Default.stickr_limit_top) / (Settings.Default.stickr_limit_bottom - Settings.Default.stickr_limit_top);
                             break;
                     }
                     return true;
