@@ -261,10 +261,10 @@ namespace WiiTUIO.Output.Handlers.Xinput
                     switch (key)
                     {
                         case "360.stickl":
-                            report.StickLX = smoothedX;
-                            report.StickLY = smoothedY;
-                            report.StickRX = (smoothedPos.X - Settings.Default.stickl_limit_left) / (Settings.Default.stickl_limit_right - Settings.Default.stickl_limit_left);
-                            report.StickRY = 1 - (smoothedPos.Y - Settings.Default.stickl_limit_top) / (Settings.Default.stickl_limit_bottom - Settings.Default.stickl_limit_top);
+                            //report.StickLX = smoothedX;
+                            //report.StickLY = smoothedY;
+                            report.StickLX = (smoothedPos.X - Settings.Default.stickl_limit_left) / (Settings.Default.stickl_limit_right - Settings.Default.stickl_limit_left);
+                            report.StickLY = 1 - (smoothedPos.Y - Settings.Default.stickl_limit_top) / (Settings.Default.stickl_limit_bottom - Settings.Default.stickl_limit_top);
                             break;
                         case "360.stickr":
                             //report.StickRX = smoothedX;
